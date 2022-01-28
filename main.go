@@ -9,6 +9,7 @@ import (
 	"fyne.io/fyne/v2"
 	"fyne.io/fyne/v2/app"
 	"fyne.io/fyne/v2/container"
+	"fyne.io/fyne/v2/layout"
 	"fyne.io/fyne/v2/widget"
 )
 
@@ -24,10 +25,13 @@ func main() {
 	window.Resize(fyne.NewSize(400, 0))
 	//设置窗口大小
 	url := widget.NewEntry()
-	url.SetPlaceHolder("| |video url")
+	//url.SetPlaceHolder("input video url")
+	url1 := widget.NewLabel("| |video url:")
 	//视频地址输入栏
 	path := widget.NewEntry()
-	path.SetPlaceHolder("| |save path")
+	//path.SetPlaceHolder("input save path")
+	path1 := widget.NewLabel("| |save path:")
+	form := container.New(layout.NewFormLayout(), url1, url, path1, path)
 	//保存位置输入栏
 	status := widget.NewLabel("| |No downloading")
 	//初始化下载状态栏
@@ -39,7 +43,7 @@ func main() {
 		} else {
 			go func() {
 				num++
-				num1:=num
+				num1 := num
 				status.SetText(strconv.Itoa(num1) + "| |download start!")
 				err := download(url.Text, path.Text)
 				if err != nil {
@@ -52,8 +56,7 @@ func main() {
 	})
 	//定义下载这个作用
 	content := container.NewVBox(
-		url,
-		path,
+		form,
 		download,
 		status,
 	)
