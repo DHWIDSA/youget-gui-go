@@ -28,7 +28,7 @@ pip install you-get
 git clone https://github.com/DHWIDSA/youget-gui-go
 ```
 
-for linux users:
+#### for linux users
 
 linux:
 
@@ -42,7 +42,7 @@ linux to windows:
 env CC=x86_64-w64-mingw32-gcc CGO_ENABLED=1 GOOS=windows go build -ldflags="-H windowsgui"
 ```
 
-for windows users:
+#### for windows users
 
 ```shell
 go build -ldflags="-H windowsgui"
