@@ -18,6 +18,22 @@ url and click `download`,everything is easy!
 
 ### Install dependencies
 
+you should install  golang first,for example:
+
+#### Debian
+
+```shell
+apt install golang-go
+```
+
+#### Archlinux
+
+```shell
+pacman -S golang
+```
+
+then you must install you-get library via `pip install`.
+
 ```shell
 pip install you-get
 ```
