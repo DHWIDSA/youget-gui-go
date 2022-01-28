@@ -49,4 +49,5 @@ go build -ldflags="-H windowsgui"
 ```
 
 Thanks laishulu who offers Sarasa-Mono-SC-Nerd font.
+
 [Sarasa-Mono-SC-Nerd](https://github.com/laishulu/Sarasa-Mono-SC-Nerd)
