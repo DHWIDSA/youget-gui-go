@@ -3,7 +3,7 @@
 
 A gui written in Golang for you-get.
 
-![image](./images/2022-01-28_13-15.png)
+![image](./images/2022-01-28_17-52.png)
 
 ## Useage
 
