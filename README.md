@@ -22,11 +22,13 @@ url and click `download`,everything is easy!
 pip install you-get
 ```
 
-### Build
+### Clone
 
 ```shell
 git clone https://github.com/DHWIDSA/youget-gui-go
 ```
+
+### Build
 
 #### for linux users
 
