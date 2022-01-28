@@ -5,7 +5,7 @@ A gui written in Golang for you-get.
 
 ![image](./images/2022-01-28_17-52.png)
 
-## Useage
+## Usage
 
 ```shell
 ./youget-gui
