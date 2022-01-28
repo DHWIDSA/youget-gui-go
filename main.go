@@ -19,6 +19,7 @@ var num int = 0
 
 func main() {
 	app := app.New()
+	//创建一个新的app
 	app.Settings().SetTheme(&myTheme{})
 	//设置客制化主题解决中文问题
 	window := app.NewWindow("you-get-gui")
@@ -77,3 +78,4 @@ func download(url string, path string) error {
 	}
 	return err
 }
+//使用you-get下载视频
