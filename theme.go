@@ -29,9 +29,7 @@ func (*myTheme) Font(s fyne.TextStyle) fyne.Resource {
 }
 
 func (*myTheme) Color(n fyne.ThemeColorName, v fyne.ThemeVariant) color.Color {
-	return theme.LightTheme().Color(n, v)
-	//return theme.DefaultTheme().Color(n, v)
-	//强制使用亮色主题
+	return theme.DefaultTheme().Color(n, v)
 }
 
 func (*myTheme) Icon(n fyne.ThemeIconName) fyne.Resource {
