@@ -47,3 +47,6 @@ env CC=x86_64-w64-mingw32-gcc CGO_ENABLED=1 GOOS=windows go build -ldflags="-H w
 ```shell
 go build -ldflags="-H windowsgui"
 ```
+
+Thanks laishulu who offers Sarasa-Mono-SC-Nerd font.
+[Sarasa-Mono-SC-Nerd](https://github.com/laishulu/Sarasa-Mono-SC-Nerd)
