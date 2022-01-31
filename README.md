@@ -11,7 +11,7 @@ A gui written in Golang for you-get.
 ./youget-gui
 ```
 
-Just like the picturn above,input the video
+Just like the picture above,input the video
 url and click `download`,everything is easy!
 
 ## How to build
