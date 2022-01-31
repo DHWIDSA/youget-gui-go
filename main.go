@@ -4,6 +4,8 @@ import (
 	"fmt"
 	"os"
 	"os/exec"
+	"runtime"
+	"syscall"
 	"strconv"
 
 	"fyne.io/fyne/v2"
@@ -70,6 +72,9 @@ func main() {
 func download(url string, path string) error {
 	fmt.Println("download start")
 	cmd := exec.Command("you-get", url, "-o", path)
+	if runtime.GOOS == "windows" {
+		cmd.SysProcAttr = &syscall.SysProcAttr{HideWindow: true}
+	}
 	err := cmd.Run()
 	if err != nil {
 		fmt.Println("you-get download error,you need to install you-get first!")
@@ -78,4 +83,5 @@ func download(url string, path string) error {
 	}
 	return err
 }
+
 //使用you-get下载视频
