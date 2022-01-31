@@ -46,13 +46,13 @@ git clone https://github.com/DHWIDSA/youget-gui-go
 
 ### Build
 
-#### For Linux users
-Linux:
+#### For Linux and Darwin users
+Linux and Darwin:
 
 Remove as follows in `main.go` download function:
 
 ```Golang
-if runtime.GOOS == "windows" {
+	if runtime.GOOS == "windows" {
 		cmd.SysProcAttr = &syscall.SysProcAttr{HideWindow: true}
 	}
 ```
@@ -61,7 +61,7 @@ if runtime.GOOS == "windows" {
 go build
 ```
 
-Linux to Windows:
+Others to Windows:
 
 ```shell
 env CC=x86_64-w64-mingw32-gcc CGO_ENABLED=1 GOOS=windows go build -ldflags="-H windowsgui"
