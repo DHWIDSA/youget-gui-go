@@ -1,9 +1,9 @@
 
-# youget-gui-go
+# You-get GUI Golang
 
-A gui written in Golang for you-get.
+A GUI written in Golang for you-get.
 
-![image](./images/2022-01-28_17-52.png)
+![Image](./images/2022-01-28_17-52.png)
 
 ## Usage
 
@@ -11,14 +11,14 @@ A gui written in Golang for you-get.
 ./youget-gui
 ```
 
-Just like the picture above,input the video
-url and click `download`,everything is easy!
+Just like the picture above, input the video
+URL and click `download`,everything is easy!
 
 ## How to build
 
 ### Install dependencies
 
-you should install  golang first,for example:
+you should install Golang first, for example:
 
 #### Debian
 
@@ -26,13 +26,13 @@ you should install  golang first,for example:
 apt install golang-go
 ```
 
-#### Archlinux
+#### Arch
 
 ```shell
 pacman -S golang
 ```
 
-then you must install you-get library via `pip install`.
+Then you must install you-get library via `pip install`.
 
 ```shell
 pip install you-get
@@ -46,26 +46,32 @@ git clone https://github.com/DHWIDSA/youget-gui-go
 
 ### Build
 
-#### for linux users
+#### For Linux users
+Linux:
 
-linux:
+Remove as follows in `main.go` download function:
+
+```Golang
+if runtime.GOOS == "windows" {
+		cmd.SysProcAttr = &syscall.SysProcAttr{HideWindow: true}
+	}
+```
 
 ```shell
 go build
 ```
 
-linux to windows:
+Linux to Windows:
 
 ```shell
 env CC=x86_64-w64-mingw32-gcc CGO_ENABLED=1 GOOS=windows go build -ldflags="-H windowsgui"
 ```
 
-#### for windows users
+#### for Windows users
 
 ```shell
 go build -ldflags="-H windowsgui"
 ```
 
-Thanks laishulu who offers Sarasa-Mono-SC-Nerd font.
+Thanks [laishulu](https://github.com/) who offers [Sarasa-Mono-SC-Nerd](https://github.com/laishulu/Sarasa-Mono-SC-Nerd) font.
 
-[Sarasa-Mono-SC-Nerd](https://github.com/laishulu/Sarasa-Mono-SC-Nerd)
