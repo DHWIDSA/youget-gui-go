@@ -1,4 +1,3 @@
-
 # You-get GUI Golang
 
 A GUI written in Golang for you-get.
@@ -47,6 +46,7 @@ git clone https://github.com/DHWIDSA/youget-gui-go
 ### Build
 
 #### For Linux and Darwin users
+
 Linux and Darwin:
 
 Remove as follows in `main.go` download function:
@@ -74,4 +74,3 @@ go build -ldflags="-H windowsgui"
 ```
 
 Thanks [laishulu](https://github.com/) who offers [Sarasa-Mono-SC-Nerd](https://github.com/laishulu/Sarasa-Mono-SC-Nerd) font.
-
