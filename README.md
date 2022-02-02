@@ -17,7 +17,7 @@ URL and click `download`,everything is easy!
 
 ### Install dependencies
 
-you should install Golang first, for example:
+You should install Golang first, for example:
 
 #### Debian
 
@@ -45,9 +45,9 @@ git clone https://github.com/DHWIDSA/youget-gui-go
 
 ### Build
 
-#### For Linux and Darwin users
+#### For Linux and MacOS users
 
-Linux and Darwin:
+Linux and MacOS:
 
 Remove as follows in `main.go` download function:
 
@@ -67,10 +67,10 @@ Others to Windows:
 env CC=x86_64-w64-mingw32-gcc CGO_ENABLED=1 GOOS=windows go build -ldflags="-H windowsgui"
 ```
 
-#### for Windows users
+#### For Windows users
 
 ```shell
 go build -ldflags="-H windowsgui"
 ```
 
-Thanks [laishulu](https://github.com/) who offers [Sarasa-Mono-SC-Nerd](https://github.com/laishulu/Sarasa-Mono-SC-Nerd) font.
+Thanks [laishulu](https://github.com/laishulu) who offers [Sarasa-Mono-SC-Nerd](https://github.com/laishulu/Sarasa-Mono-SC-Nerd) font.
