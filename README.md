@@ -6,7 +6,7 @@ A GUI written in Golang for you-get.
 
 ## Usage
 
-```shell
+```sh
 ./youget-gui
 ```
 
@@ -21,25 +21,25 @@ You should install Golang first, for example:
 
 #### Debian
 
-```shell
+```sh
 apt install golang-go
 ```
 
 #### Arch
 
-```shell
+```sh
 pacman -S golang
 ```
 
 Then you must install you-get library via `pip install`.
 
-```shell
+```sh
 pip install you-get
 ```
 
 ### Clone
 
-```shell
+```sh
 git clone https://github.com/DHWIDSA/youget-gui-go
 ```
 
@@ -57,19 +57,19 @@ Remove as follows in `main.go` download function:
 	}
 ```
 
-```shell
+```sh
 go build
 ```
 
 Others to Windows:
 
-```shell
+```sh
 env CC=x86_64-w64-mingw32-gcc CGO_ENABLED=1 GOOS=windows go build -ldflags="-H windowsgui"
 ```
 
 #### For Windows users
 
-```shell
+```sh
 go build -ldflags="-H windowsgui"
 ```
 
